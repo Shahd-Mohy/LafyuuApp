@@ -7,50 +7,51 @@ class Apptheme {
   Apptheme._();
 
   static ThemeData lightTheme = ThemeData(
-    brightness: Brightness.light,
-    primaryColor: primaryBlue,
-    scaffoldBackgroundColor: white,
-    appBarTheme: AppBarTheme(
-      backgroundColor: white,
-      foregroundColor: darkBlueGray,
-      elevation: 0,
-    ),
-    cardColor: white,
-    colorScheme: ColorScheme.light(
-      primary: primaryBlue,
-      secondary: secondaryOrange,
-      surface: white,
-      background: white,
-      onPrimary: white,
-      onSecondary: white,
-      onSurface: darkBlueGray,
-      onBackground: darkBlueGray,
-    ),
-    textTheme: CustomTextTheme.lightTextTheme,
-    elevatedButtonTheme: ElevatedButtonThemeData(
-      style: ElevatedButton.styleFrom(
-        backgroundColor: primaryBlue,
-        foregroundColor: white,
-        textStyle: TextStyle(
-          fontFamily: GoogleFonts.poppins().fontFamily,
-          fontWeight: FontWeight.w600,
-        ),
-        shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(8)),
+  fontFamily: GoogleFonts.poppins().fontFamily,  
+  scaffoldBackgroundColor: white,
+  appBarTheme: AppBarTheme(
+    backgroundColor: white,
+    foregroundColor: darkBlueGray,
+    elevation: 0,
+  ),
+  cardColor: white,
+  colorScheme: ColorScheme.light(
+    primary: primaryBlue,
+    secondary: secondaryOrange,
+    surface: white,
+    background: white,
+    onPrimary: white,
+    onSecondary: white,
+    onSurface: darkBlueGray,
+    onBackground: darkBlueGray,
+  ),
+  textTheme: CustomTextTheme.lightTextTheme,  // Optional: Keep for backward compatibility, or replace with manual styles from text_styles.dart
+  elevatedButtonTheme: ElevatedButtonThemeData(
+    style: ElevatedButton.styleFrom(
+      backgroundColor: primaryBlue,
+      foregroundColor: white,
+      textStyle: const TextStyle(
+        fontWeight: FontWeight.w600,
+      ),
+      shape: RoundedRectangleBorder(
+        borderRadius: BorderRadius.circular(8),
       ),
     ),
-    inputDecorationTheme: InputDecorationTheme(
-      border: OutlineInputBorder(
-        borderRadius: const BorderRadius.all(Radius.circular(8)),
-        borderSide: BorderSide(color: lightBorder),
-      ),
-      focusedBorder: OutlineInputBorder(
-        borderRadius: const BorderRadius.all(Radius.circular(8)),
-        borderSide: BorderSide(color: primaryBlue),
-      ),
-      labelStyle: TextStyle(color: mutedGray),
+  ),
+  inputDecorationTheme: InputDecorationTheme(
+    border: OutlineInputBorder(
+      borderRadius: const BorderRadius.all(Radius.circular(8)),
+      borderSide: BorderSide(color: lightBorder),
     ),
-  );
+    focusedBorder: OutlineInputBorder(
+      borderRadius: const BorderRadius.all(Radius.circular(8)),
+      borderSide: BorderSide(color: primaryBlue),
+    ),
+    labelStyle: TextStyle(color: mutedGray),
+  ),
+);
   static ThemeData darkTheme = ThemeData(
+  fontFamily: GoogleFonts.poppins().fontFamily,  
   brightness: Brightness.dark,
   primaryColor: primaryBlue,
   scaffoldBackgroundColor: darkBackground,
@@ -70,13 +71,12 @@ class Apptheme {
     onSurface: white,
     onBackground: white,
   ),
-  textTheme: CustomTextTheme.darkTextTheme,
+  textTheme: CustomTextTheme.darkTextTheme,  // Optional: Keep for backward compatibility, or replace with manual styles from text_styles.dart
   elevatedButtonTheme: ElevatedButtonThemeData(
     style: ElevatedButton.styleFrom(
       backgroundColor: primaryBlue,
       foregroundColor: white,
-      textStyle: TextStyle(
-        fontFamily: GoogleFonts.poppins().fontFamily,
+      textStyle: const TextStyle(
         fontWeight: FontWeight.w600,
       ),
       shape: RoundedRectangleBorder(
