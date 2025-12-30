@@ -1,205 +1,144 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:google_fonts/google_fonts.dart';
 import 'package:lafayuu_app/core/utils/constatns/const_colors.dart';
 
-abstract class TextStyles {
-  // Headline Styles
-  static TextStyle headlineLarge = TextStyle(
-    fontFamily: GoogleFonts.poppins().fontFamily,
-    fontSize: 32.sp,
-    fontWeight: FontWeight.bold,
-    color: textPrimary,
-  );
 
-  static TextStyle headlineMedium = TextStyle(
-    fontFamily: GoogleFonts.poppins().fontFamily,
-    fontSize: 28.sp,
-    fontWeight: FontWeight.bold,
-    color: textPrimary,
-  );
-
-  static TextStyle headlineSmall = TextStyle(
-    fontFamily: GoogleFonts.poppins().fontFamily,
+abstract class AppStyles {
+  // Heading - 24sp Bold (Onboarding titles)
+  static TextStyle heading = TextStyle(
     fontSize: 24.sp,
-    fontWeight: FontWeight.w600,
+    fontWeight: FontWeight.w700,
     color: textPrimary,
+    letterSpacing: 0.5,
   );
 
-  // Title Styles
-  static TextStyle titleLarge = TextStyle(
-    fontFamily: GoogleFonts.poppins().fontFamily,
-    fontSize: 20.sp,
-    fontWeight: FontWeight.w600,
-    color: textPrimary,
-  );
-
-  static TextStyle titleMedium = TextStyle(
-    fontFamily: GoogleFonts.poppins().fontFamily,
-    fontSize: 18.sp,
-    fontWeight: FontWeight.w600,
-    color: textPrimary,
-  );
-
-  static TextStyle titleSmall = TextStyle(
-    fontFamily: GoogleFonts.poppins().fontFamily,
+  // Title - 16sp Bold (Screen titles: Welcome to Lafyuu, Let's Get Started)
+  static TextStyle title = TextStyle(
     fontSize: 16.sp,
-    fontWeight: FontWeight.w500,
+    fontWeight: FontWeight.w700,
     color: textPrimary,
+    letterSpacing: 0.5,
   );
 
-  // Body Styles
-  static TextStyle bodyLarge = TextStyle(
-    fontFamily: GoogleFonts.poppins().fontFamily,
-    fontSize: 16.sp,
-    fontWeight: FontWeight.normal,
-    color: textPrimary,
-  );
-
-  static TextStyle bodyMedium = TextStyle(
-    fontFamily: GoogleFonts.poppins().fontFamily,
-    fontSize: 14.sp,
-    fontWeight: FontWeight.normal,
-    color: textSecondary,
-  );
-
-  static TextStyle bodySmall = TextStyle(
-    fontFamily: GoogleFonts.poppins().fontFamily,
+  // Subtitle - 12sp Regular (Sign in to continue, Create a new account)
+  static TextStyle subtitle = TextStyle(
     fontSize: 12.sp,
-    fontWeight: FontWeight.normal,
+    fontWeight: FontWeight.w400,
     color: textSecondary,
+    letterSpacing: 0.5,
   );
 
-  // Label Styles
-  static TextStyle labelLarge = TextStyle(
-    fontFamily: GoogleFonts.poppins().fontFamily,
+  // Button Text - 14sp Bold
+  static TextStyle button = TextStyle(
     fontSize: 14.sp,
-    fontWeight: FontWeight.w500,
-    color: textPrimary,
+    fontWeight: FontWeight.w700,
+    color: textLight,
+    letterSpacing: 0.5,
   );
 
-  static TextStyle labelMedium = TextStyle(
-    fontFamily: GoogleFonts.poppins().fontFamily,
+  // Input Text - 12sp Bold (when typing)
+  static TextStyle inputText = TextStyle(
     fontSize: 12.sp,
-    fontWeight: FontWeight.w500,
+    fontWeight: FontWeight.w700,
     color: textSecondary,
+    letterSpacing: 0.5,
   );
 
-  static TextStyle labelSmall = TextStyle(
-    fontFamily: GoogleFonts.poppins().fontFamily,
+  // Input Hint - 12sp Regular
+  static TextStyle inputHint = TextStyle(
+    fontSize: 12.sp,
+    fontWeight: FontWeight.w400,
+    color: textSecondary,
+    letterSpacing: 0.5,
+  );
+
+  // Link Text - 12sp Bold (Register, Sign In, Forgot Password?)
+  static TextStyle link = TextStyle(
+    fontSize: 12.sp,
+    fontWeight: FontWeight.w700,
+    color: primaryBlue,
+    letterSpacing: 0.5,
+  );
+
+  // Body Text - 12sp Regular (Don't have account?, have a account?)
+  static TextStyle body = TextStyle(
+    fontSize: 12.sp,
+    fontWeight: FontWeight.w400,
+    color: textSecondary,
+    letterSpacing: 0.5,
+  );
+
+  // OR Divider Text - 14sp Bold
+  static TextStyle divider = TextStyle(
+    fontSize: 14.sp,
+    fontWeight: FontWeight.w700,
+    color: textSecondary,
+    letterSpacing: 0.5,
+  );
+
+  // Skip Button - 14sp Bold
+  static TextStyle skip = TextStyle(
+    fontSize: 14.sp,
+    fontWeight: FontWeight.w700,
+    color: textSecondary,
+    letterSpacing: 0.5,
+  );
+
+  // Social Button Text - 14sp Bold
+  static TextStyle socialButton = TextStyle(
+    fontSize: 14.sp,
+    fontWeight: FontWeight.w700,
+    color: textSecondary,
+    letterSpacing: 0.5,
+  );
+
+  // Onboarding Subtitle - 12sp Regular with line height
+  static TextStyle onboardingSubtitle = TextStyle(
+    fontSize: 12.sp,
+    fontWeight: FontWeight.w400,
+    color: textSecondary,
+    letterSpacing: 0.5,
+    height: 1.8,
+  );
+
+  // Price - 14sp Bold Blue
+  static TextStyle price = TextStyle(
+    fontSize: 14.sp,
+    fontWeight: FontWeight.w700,
+    color: primaryBlue,
+    letterSpacing: 0.5,
+  );
+
+  // Old Price - 10sp Regular with line through
+  static TextStyle oldPrice = TextStyle(
     fontSize: 10.sp,
     fontWeight: FontWeight.w400,
-    color: textMuted,
-  );
-
-  // Button Styles
-  static TextStyle buttonPrimary = TextStyle(
-    fontFamily: GoogleFonts.poppins().fontFamily,
-    fontSize: 16.sp,
-    fontWeight: FontWeight.w600,
-    color: textLight,
-  );
-
-  static TextStyle buttonSecondary = TextStyle(
-    fontFamily: GoogleFonts.poppins().fontFamily,
-    fontSize: 16.sp,
-    fontWeight: FontWeight.w600,
-    color: primaryBlue,
-  );
-
-  static TextStyle buttonOutline = TextStyle(
-    fontFamily: GoogleFonts.poppins().fontFamily,
-    fontSize: 16.sp,
-    fontWeight: FontWeight.w500,
-    color: primaryBlue,
-  );
-
-  // Input Field Styles
-  static TextStyle inputText = TextStyle(
-    fontFamily: GoogleFonts.poppins().fontFamily,
-    fontSize: 16.sp,
-    fontWeight: FontWeight.normal,
-    color: textPrimary,
-  );
-
-  static TextStyle inputHint = TextStyle(
-    fontFamily: GoogleFonts.poppins().fontFamily,
-    fontSize: 16.sp,
-    fontWeight: FontWeight.normal,
     color: textSecondary,
+    letterSpacing: 0.5,
+    decoration: TextDecoration.lineThrough,
   );
 
-  static TextStyle inputLabel = TextStyle(
-    fontFamily: GoogleFonts.poppins().fontFamily,
-    fontSize: 14.sp,
-    fontWeight: FontWeight.w500,
-    color: textPrimary,
-  );
-
-  static TextStyle inputError = TextStyle(
-    fontFamily: GoogleFonts.poppins().fontFamily,
-    fontSize: 12.sp,
-    fontWeight: FontWeight.normal,
-    color: errorRed,
-  );
-
-  // Link Styles
-  static TextStyle linkPrimary = TextStyle(
-    fontFamily: GoogleFonts.poppins().fontFamily,
-    fontSize: 16.sp,
-    fontWeight: FontWeight.w500,
-    color: primaryBlue,
-  );
-
-  static TextStyle linkSecondary = TextStyle(
-    fontFamily: GoogleFonts.poppins().fontFamily,
-    fontSize: 14.sp,
-    fontWeight: FontWeight.w500,
-    color: primaryBlue,
-  );
-
-  // Caption Styles
-  static TextStyle caption = TextStyle(
-    fontFamily: GoogleFonts.poppins().fontFamily,
-    fontSize: 12.sp,
-    fontWeight: FontWeight.normal,
-    color: textMuted,
-  );
-
-  static TextStyle overline = TextStyle(
-    fontFamily: GoogleFonts.poppins().fontFamily,
-    fontSize: 10.sp,
-    fontWeight: FontWeight.w500,
-    color: textMuted,
-    letterSpacing: 1.5,
-  );
-
-  // Special Styles
-  static TextStyle price = TextStyle(
-    fontFamily: GoogleFonts.poppins().fontFamily,
-    fontSize: 18.sp,
-    fontWeight: FontWeight.bold,
-    color: primaryBlue,
-  );
-
+  // Discount - 10sp Bold Red
   static TextStyle discount = TextStyle(
-    fontFamily: GoogleFonts.poppins().fontFamily,
-    fontSize: 14.sp,
-    fontWeight: FontWeight.w500,
+    fontSize: 10.sp,
+    fontWeight: FontWeight.w700,
     color: errorRed,
+    letterSpacing: 0.5,
   );
 
-  static TextStyle success = TextStyle(
-    fontFamily: GoogleFonts.poppins().fontFamily,
-    fontSize: 14.sp,
-    fontWeight: FontWeight.w500,
-    color: successGreen,
+  // Product Title - 12sp Bold
+  static TextStyle productTitle = TextStyle(
+    fontSize: 12.sp,
+    fontWeight: FontWeight.w700,
+    color: textPrimary,
+    letterSpacing: 0.5,
   );
 
-  static TextStyle warning = TextStyle(
-    fontFamily: GoogleFonts.poppins().fontFamily,
-    fontSize: 14.sp,
-    fontWeight: FontWeight.w500,
-    color: warningYellow,
+  // Category Title - 10sp Regular
+  static TextStyle category = TextStyle(
+    fontSize: 10.sp,
+    fontWeight: FontWeight.w400,
+    color: textSecondary,
+    letterSpacing: 0.5,
   );
 }
