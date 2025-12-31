@@ -4,6 +4,8 @@ import 'package:lafayuu_app/features/authentication/login/presentation/view/logi
 import 'package:lafayuu_app/features/authentication/onboarding/presentation/view/onboarding_view.dart';
 import 'package:lafayuu_app/features/authentication/register/presentation/view/register_view.dart';
 import 'package:lafayuu_app/features/shop/home/presentation/view/home_view.dart';
+import 'package:lafayuu_app/features/shop/offer/presentation/view/offer_view.dart';
+import 'package:lafayuu_app/features/shop/product_details/presentation/view/product_details_view.dart';
 
 abstract class AppRouter {
   static const kOnboardingView = '/';
@@ -11,6 +13,8 @@ abstract class AppRouter {
   static const kRegisterView = '/register';
   static const kForgotPasswordView = '/forgot-password';
   static const kHomeView = '/home';
+  static const kOfferView = '/offer';
+  static const kProductDetailsView = '/product-details';
 
   static final router = GoRouter(
     routes: [
@@ -28,6 +32,11 @@ abstract class AppRouter {
         builder: (context, state) => const ForgotPasswordView(),
       ),
       GoRoute(path: kHomeView, builder: (context, state) => const HomeView()),
+      GoRoute(path: kOfferView, builder: (context, state) => const OfferView()),
+      GoRoute(
+        path: kProductDetailsView,
+        builder: (context, state) => const ProductDetailsView(),
+      ),
     ],
   );
 }
